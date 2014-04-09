@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NSData+AES256.h"
+#import "NSData+encyuption.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +17,30 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSString *myToken = [NSData AES256EncryptWithPlainText:@"AES"];
+    NSLog(@"%@",myToken);
+    
+    //NSData *tokenData = [[NSData alloc] init];
+    //tokenData = [tokenData AES256EncryptWithKey:[@"xpos1qazZSE$xpos" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSString *key = @"xpos1qazZSE$xpos";
+    
+    NSString *secret = @"pt1|||admin";
+    
+    //加密
+    
+    NSData *plain = [secret dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSData *cipher = [plain AES256EncryptWithKey:key];
+    
+    NSLog(@"%@",[[cipher newStringInBase64FromData] autorelease]);
+    NSLog(@"%@",[cipher base64Encoding]);
+    
+    printf("%s\n", [[cipher description] UTF8String]);
+    
+    NSLog(@"%@", [[[NSString alloc] initWithData:cipher encoding:NSUTF8StringEncoding] autorelease]);//打印出null,这是因为没有解密。
+    
     return YES;
 }
 

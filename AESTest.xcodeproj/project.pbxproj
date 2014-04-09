@@ -19,6 +19,11 @@
 		28AF4CD9182B9557008BFB4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF4CC1182B9557008BFB4A /* UIKit.framework */; };
 		28AF4CE1182B9557008BFB4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28AF4CDF182B9557008BFB4A /* InfoPlist.strings */; };
 		28AF4CE3182B9557008BFB4A /* AESTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AF4CE2182B9557008BFB4A /* AESTestTests.m */; };
+		28AF4CF0182B956C008BFB4A /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AF4CED182B956C008BFB4A /* NSData+AES256.m */; };
+		28AF4CF1182B956C008BFB4A /* NSData+encyuption.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AF4CEF182B956C008BFB4A /* NSData+encyuption.m */; };
+		28AF4CF3182B9577008BFB4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF4CF2182B9577008BFB4A /* SystemConfiguration.framework */; };
+		28AF4CF5182B9598008BFB4A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF4CF4182B9598008BFB4A /* libz.dylib */; };
+		28AF4CF7182B959F008BFB4A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AF4CF6182B959F008BFB4A /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,13 @@
 		28AF4CDE182B9557008BFB4A /* AESTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AESTestTests-Info.plist"; sourceTree = "<group>"; };
 		28AF4CE0182B9557008BFB4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28AF4CE2182B9557008BFB4A /* AESTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESTestTests.m; sourceTree = "<group>"; };
+		28AF4CEC182B956C008BFB4A /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		28AF4CED182B956C008BFB4A /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		28AF4CEE182B956C008BFB4A /* NSData+encyuption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+encyuption.h"; sourceTree = "<group>"; };
+		28AF4CEF182B956C008BFB4A /* NSData+encyuption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+encyuption.m"; sourceTree = "<group>"; };
+		28AF4CF2182B9577008BFB4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		28AF4CF4182B9598008BFB4A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		28AF4CF6182B959F008BFB4A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28AF4CF7182B959F008BFB4A /* MobileCoreServices.framework in Frameworks */,
+				28AF4CF5182B9598008BFB4A /* libz.dylib in Frameworks */,
+				28AF4CF3182B9577008BFB4A /* SystemConfiguration.framework in Frameworks */,
 				28AF4CC0182B9557008BFB4A /* CoreGraphics.framework in Frameworks */,
 				28AF4CC2182B9557008BFB4A /* UIKit.framework in Frameworks */,
 				28AF4CBE182B9557008BFB4A /* Foundation.framework in Frameworks */,
@@ -96,6 +111,9 @@
 		28AF4CBC182B9557008BFB4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28AF4CF6182B959F008BFB4A /* MobileCoreServices.framework */,
+				28AF4CF4182B9598008BFB4A /* libz.dylib */,
+				28AF4CF2182B9577008BFB4A /* SystemConfiguration.framework */,
 				28AF4CBD182B9557008BFB4A /* Foundation.framework */,
 				28AF4CBF182B9557008BFB4A /* CoreGraphics.framework */,
 				28AF4CC1182B9557008BFB4A /* UIKit.framework */,
@@ -107,6 +125,10 @@
 		28AF4CC3182B9557008BFB4A /* AESTest */ = {
 			isa = PBXGroup;
 			children = (
+				28AF4CEC182B956C008BFB4A /* NSData+AES256.h */,
+				28AF4CED182B956C008BFB4A /* NSData+AES256.m */,
+				28AF4CEE182B956C008BFB4A /* NSData+encyuption.h */,
+				28AF4CEF182B956C008BFB4A /* NSData+encyuption.m */,
 				28AF4CCC182B9557008BFB4A /* AppDelegate.h */,
 				28AF4CCD182B9557008BFB4A /* AppDelegate.m */,
 				28AF4CCF182B9557008BFB4A /* Images.xcassets */,
@@ -240,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AF4CCE182B9557008BFB4A /* AppDelegate.m in Sources */,
+				28AF4CF0182B956C008BFB4A /* NSData+AES256.m in Sources */,
+				28AF4CF1182B956C008BFB4A /* NSData+encyuption.m in Sources */,
 				28AF4CCA182B9557008BFB4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AESTest/AESTest-Prefix.pch";
 				INFOPLIST_FILE = "AESTest/AESTest-Info.plist";
@@ -372,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AESTest/AESTest-Prefix.pch";
 				INFOPLIST_FILE = "AESTest/AESTest-Info.plist";
