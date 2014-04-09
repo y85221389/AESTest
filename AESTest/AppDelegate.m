@@ -24,9 +24,9 @@
     //NSData *tokenData = [[NSData alloc] init];
     //tokenData = [tokenData AES256EncryptWithKey:[@"xpos1qazZSE$xpos" dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSString *key = @"xpos1qazZSE$xpos";
+    NSString *key = @"key";
     
-    NSString *secret = @"pt1|||admin";
+    NSString *secret = @"admin";
     
     //加密
     
